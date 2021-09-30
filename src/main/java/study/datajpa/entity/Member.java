@@ -9,6 +9,11 @@ import javax.persistence.*;
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED) //PROTECTED 기본 생성자 넣어주기
 @ToString(of = {"id", "username", "age"}) //toString은 연관관계 필드는 무한루프에 빠질 수 있으므로 넣지 않는다.
+
+@NamedQuery(
+        name="Member.findByUsername",
+        query="select m from Member m where m.username = :username"
+)
 public class Member {
 
     @Id
