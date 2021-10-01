@@ -112,4 +112,10 @@ public interface MemberRepository extends JpaRepository<Member, Long>, MemberRep
     //JPA Lock
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     List<Member> findLockByUsername(String name);
+
+    /**Projections
+     * 엔티티 대신에 DTO를 편리하게 조회할 때 사용
+     * 예를 들어 전체 엔티티가 아니라 만약 회원 이름만 딱 조회하고 싶은 경우
+     * ***/
+    List<UsernameOnly> findProjectionsByUsername(String username);
 }
