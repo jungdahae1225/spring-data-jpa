@@ -21,7 +21,7 @@ import java.util.Optional;
  * 3. SpringDataJpa는 @Repository 애노테이션 생략 가능 합니다.
  * **/
 
-public interface MemberRepository extends JpaRepository<Member, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
 
     //------------스프링 데이터 JPA에 기본적으로 포함 되어있지 않은 메서드는 인터페이스 커스텀한다.---------------//
 
