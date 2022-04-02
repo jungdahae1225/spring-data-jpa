@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+/****
+ *순수 JPA로만 작성해보기 
+ */
 public class MemberJpaRepository {
 
     /**
