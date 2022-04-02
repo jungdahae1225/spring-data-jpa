@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Getter @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED) //PROTECTED 기본 생성자 넣어주기
-@ToString(of = {"id", "username", "age"}) //toString은 연관관계 필드는 무한루프에 빠질 수 있으므로 넣지 않는다.
+@NoArgsConstructor(access = AccessLevel.PROTECTED) //JPA의 로직 상 PROTECTED 기본 생성자 넣어주기
+@ToString(of = {"id", "username", "age"}) //toString에서 연관관계 필드는 무한루프에 빠질 수 있으므로 넣지 않는다.
 
 @NamedQuery(
         name="Member.findByUsername",
@@ -43,7 +43,7 @@ public class Member {
         }
     }
 
-    public void changeTeam(Team team) { //Member는 팀을 변경 할 수 있도록
+    public void changeTeam(Team team) { //Member는 팀을 변경 할 수 있도록(그냥 초기 세팅도 이거 사용)
         this.team = team;
         team.getMembers().add(this);
     }
