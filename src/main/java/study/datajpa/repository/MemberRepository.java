@@ -13,6 +13,9 @@ import javax.persistence.LockModeType;
 import javax.persistence.QueryHint;
 import java.util.List;
 import java.util.Optional;
+/**
+ * reviewing_20220403
+ */
 
 /**
  * -----MemberJpaRepository를 SpringDataJpa화 한 리포지토리입니다.-----
