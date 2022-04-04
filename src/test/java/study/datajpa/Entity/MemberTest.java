@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import study.datajpa.entity.Member;
 import study.datajpa.entity.Team;
-import study.datajpa.repository.MemberRepository;
+import study.datajpa.repository.springDataJPA.MemberRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

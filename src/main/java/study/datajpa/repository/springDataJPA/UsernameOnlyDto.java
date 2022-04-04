@@ -1,4 +1,4 @@
-package study.datajpa.repository;
+package study.datajpa.repository.springDataJPA;
 
 /**
  * 클래스 기반 Projection

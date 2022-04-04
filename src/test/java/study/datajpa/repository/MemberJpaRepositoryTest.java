@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import study.datajpa.entity.Member;
+import study.datajpa.repository.originalJPA.MemberJpaRepository;
 
 import javax.transaction.Transactional;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional //JPA의 모든 변경을 트랜젠션 안에서 실행 되어야 한다.

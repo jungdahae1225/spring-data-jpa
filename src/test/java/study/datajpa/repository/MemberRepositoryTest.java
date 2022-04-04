@@ -11,6 +11,9 @@ import org.springframework.test.annotation.Rollback;
 import study.datajpa.dto.MemberDto;
 import study.datajpa.entity.Member;
 import study.datajpa.entity.Team;
+import study.datajpa.repository.springDataJPA.MemberRepository;
+import study.datajpa.repository.springDataJPA.TeamRepository;
+import study.datajpa.repository.springDataJPA.UsernameOnly;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,8 +30,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Rollback(false)
 public class MemberRepositoryTest {
 
-    @Autowired MemberRepository memberRepository;
-    @Autowired TeamRepository teamRepository;
+    @Autowired
+    MemberRepository memberRepository;
+    @Autowired
+    TeamRepository teamRepository;
     @PersistenceContext EntityManager entityManager;
 
     @Test
