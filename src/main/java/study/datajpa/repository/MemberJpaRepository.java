@@ -17,7 +17,7 @@ public class MemberJpaRepository {
     /**
      * 기본 CRUD
      * 저장
-     * 변경 변경감지 사용
+     * 변경 => 변경감지 사용(코드 짜 줄 필요 없음)
      * 삭제
      * 전체 조회
      * 단건 조회
