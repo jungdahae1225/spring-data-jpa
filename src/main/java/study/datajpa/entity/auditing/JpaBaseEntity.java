@@ -1,4 +1,4 @@
-package study.datajpa.entity;
+package study.datajpa.entity.auditing;
 
 import lombok.Getter;
 
